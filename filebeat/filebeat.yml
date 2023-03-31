@@ -1,0 +1,10 @@
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - /usr/local/apache2/logs/access_log
+
+output.logstash:
+  hosts: ["logstash:5044"]
+
+logging.level: info
